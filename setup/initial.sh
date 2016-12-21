@@ -7,7 +7,7 @@ echo "--- upgrading apt-get"
 sudo apt-get upgrade -y
 
 echo "--- installing new linux headers"
-sudo apt-get install linux-headers-$(uname -r)
+sudo apt-get install linux-headers-$(uname -r) -y
 
 echo "--- dist-upgrading apt-get"
 sudo apt update
