@@ -5,3 +5,6 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 
 echo "--- enabling gTile"
 gnome-shell-extension-tool -e gTile@vibou
+
+echo "--- install bettercap"
+apt-get install bettercap

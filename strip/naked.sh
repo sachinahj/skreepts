@@ -16,4 +16,5 @@ echo "---adding INPUT ACCEPT to iptables"
 iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
 iptables -L INPUT
 
+echo "=== maybe these commands can help next ==="
 echo "bettercap --proxy -I wlan0 -P POST -G 192.168.0.1 -T 192.168.0.4"

@@ -18,6 +18,7 @@ else
   iwconfig
 fi
 
+echo "=== maybe these commands can help next ==="
 echo "airodump-ng wlan0mon --band abg"
 
 #echo "---airodump-ng wlan0mon -c 36 --bssid "
