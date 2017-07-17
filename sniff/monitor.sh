@@ -19,18 +19,20 @@ CHANNEL=${CHANNEL:-"36"}
 
 if iwconfig | grep -q wlan0mon
 then
-  echo "--- doing nothing. wlan0mon already detected."
-else
-
-  echo "kill airmong-ng check processes"
-  airmon-ng check kill
-
-  echo "--- starting monitor mode on channel $CHANNEL"
-  airmon-ng start wlan0 $CHANNEL
-
-  echo "--- started monitor mode on channel $CHANNEL"
-  iwconfig
+  echo "--- wlan0mon already detected."
+  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  $DIR/managed.sh
 fi
+
+
+echo "kill airmong-ng check processes"
+airmon-ng check kill
+
+echo "--- starting monitor mode on channel $CHANNEL"
+airmon-ng start wlan0 $CHANNEL
+
+echo "--- started monitor mode on channel $CHANNEL"
+iwconfig
 
 echo "=== maybe these commands can help next ==="
 echo "airodump-ng wlan0mon --band abg"

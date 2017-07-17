@@ -19,6 +19,9 @@ mkdir -p ~/.local/share/gnome-shell/extensions
 echo "--- cloning gTile into gnome-shell extensions folder"
 git clone https://github.com/lundal/vibou.gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou
 
+echo "-- autoremoving unused apt packages"
+apt autoremove
+
 echo "---rebooting in 10 seconds"
 sleep 10
 reboot
