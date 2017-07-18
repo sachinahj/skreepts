@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-$DIR/manoutthemiddle.sh
+$DIR/clothed.sh
 
 echo "--- setting /proc/sys/net/ipv4/ip_forward to 1"
 echo 1 > /proc/sys/net/ipv4/ip_forward
